@@ -1,3 +1,4 @@
+<img width="1872" height="1170" alt="image" src="https://github.com/user-attachments/assets/3cd13b86-9485-4fae-ac95-85144ec2543b" />
 # StockFlow — Inventory Management Dashboard
 
 A modern frontend inventory management application for tracking products, stock levels, suppliers, categories and inventory activity.
