@@ -2,10 +2,12 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { Search, Bell, Menu, Sun, Moon, Monitor } from "lucide-react";
 import { useTheme } from "../../context/ThemeContext";
+import { useToast } from "../../context/ToastContext";
 import { cn } from "../../lib/utils";
 
 export function Topbar({ setSidebarOpen }) {
   const location = useLocation();
+  const { addToast } = useToast();
   const path = location.pathname.split('/')[1] || "dashboard";
   const title = path.charAt(0).toUpperCase() + path.slice(1);
   const { theme, setTheme, resolvedTheme } = useTheme();
@@ -48,7 +50,10 @@ export function Topbar({ setSidebarOpen }) {
           {theme === 'system' ? <Monitor size={20} /> : resolvedTheme === 'dark' ? <Moon size={20} /> : <Sun size={20} />}
         </button>
 
-        <button className="relative p-2 rounded-full text-text-muted hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-text-main transition-colors">
+        <button 
+          onClick={() => addToast("No new notifications")}
+          className="relative p-2 rounded-full text-text-muted hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-text-main transition-colors"
+        >
           <Bell size={20} />
           <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-red-500 ring-2 ring-card"></span>
         </button>

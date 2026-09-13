@@ -35,7 +35,7 @@ export const products = [
     supplierId: "sup-001",
     supplier: "NovaTech Supplies",
     description: "Premium wireless headphones with active noise cancellation.",
-    image: createPlaceholder("Headphones"),
+    image: "/images/products/wireless_headphones.jpg",
     lastUpdated: "2026-09-12",
   },
   {
@@ -50,7 +50,7 @@ export const products = [
     supplierId: "sup-001",
     supplier: "NovaTech Supplies",
     description: "RGB mechanical keyboard with tactile switches.",
-    image: createPlaceholder("Keyboard"),
+    image: "/images/products/mechanical_keyboard.jpg",
     lastUpdated: "2026-09-10",
   },
   {
@@ -65,7 +65,7 @@ export const products = [
     supplierId: "sup-001",
     supplier: "NovaTech Supplies",
     description: "27-inch 4K UHD monitor with ultra-thin bezels.",
-    image: createPlaceholder("Monitor"),
+    image: "/images/products/4k_monitor.jpg",
     lastUpdated: "2026-09-11",
   },
   {
@@ -80,7 +80,7 @@ export const products = [
     supplierId: "sup-002",
     supplier: "Office Furnishings Co.",
     description: "Adjustable ergonomic chair with lumbar support.",
-    image: createPlaceholder("Chair"),
+    image: "/images/products/ergonomic_office_chair.jpg",
     lastUpdated: "2026-09-08",
   },
   {
@@ -95,7 +95,7 @@ export const products = [
     supplierId: "sup-002",
     supplier: "Office Furnishings Co.",
     description: "Motorized height-adjustable standing desk.",
-    image: createPlaceholder("Desk"),
+    image: "/images/products/standing_desk.jpg",
     lastUpdated: "2026-09-05",
   },
   {
@@ -110,7 +110,7 @@ export const products = [
     supplierId: "sup-002",
     supplier: "Office Furnishings Co.",
     description: "Three-drawer metal filing cabinet.",
-    image: createPlaceholder("Cabinet"),
+    image: "/images/products/filing_cabinet.jpg",
     lastUpdated: "2026-08-20",
   },
   {
@@ -125,7 +125,7 @@ export const products = [
     supplierId: "sup-004",
     supplier: "Fresh Foods Ltd.",
     description: "1kg bag of organic arabica coffee beans.",
-    image: createPlaceholder("Coffee"),
+    image: "/images/products/organic_coffee_beans.jpg",
     lastUpdated: "2026-09-12",
   },
   {
@@ -140,7 +140,7 @@ export const products = [
     supplierId: "sup-004",
     supplier: "Fresh Foods Ltd.",
     description: "Pack of 100 premium green tea bags.",
-    image: createPlaceholder("Tea"),
+    image: "/images/products/green_tea_bags.jpg",
     lastUpdated: "2026-09-10",
   },
   {
@@ -155,7 +155,7 @@ export const products = [
     supplierId: "sup-004",
     supplier: "Fresh Foods Ltd.",
     description: "Premium California almonds.",
-    image: createPlaceholder("Almonds"),
+    image: "/images/products/almonds_500g.jpg",
     lastUpdated: "2026-09-05",
   },
   {
@@ -170,7 +170,7 @@ export const products = [
     supplierId: "sup-003",
     supplier: "Global Garments",
     description: "100% cotton plain crew neck t-shirt.",
-    image: createPlaceholder("T-Shirt"),
+    image: "/images/products/cotton_tshirt.jpg",
     lastUpdated: "2026-08-25",
   },
   {
@@ -185,7 +185,7 @@ export const products = [
     supplierId: "sup-003",
     supplier: "Global Garments",
     description: "Classic straight fit denim jeans.",
-    image: createPlaceholder("Jeans"),
+    image: "/images/products/denim_jeans.jpg",
     lastUpdated: "2026-08-20",
   },
   {
@@ -200,7 +200,7 @@ export const products = [
     supplierId: "sup-003",
     supplier: "Global Garments",
     description: "Insulated waterproof winter jacket.",
-    image: createPlaceholder("Jacket"),
+    image: "/images/products/winter_jacket.jpg",
     lastUpdated: "2026-08-10",
   },
   {
@@ -215,7 +215,7 @@ export const products = [
     supplierId: "sup-003",
     supplier: "Global Garments",
     description: "Genuine leather bi-fold wallet.",
-    image: createPlaceholder("Wallet"),
+    image: "/images/products/leather_wallet.jpg",
     lastUpdated: "2026-08-22",
   },
   {
@@ -230,7 +230,7 @@ export const products = [
     supplierId: "sup-003",
     supplier: "Global Garments",
     description: "Water-resistant backpack fits up to 15-inch laptops.",
-    image: createPlaceholder("Backpack"),
+    image: "/images/products/laptop_backpack.jpg",
     lastUpdated: "2026-08-25",
   },
   {
@@ -245,7 +245,7 @@ export const products = [
     supplierId: "sup-001",
     supplier: "NovaTech Supplies",
     description: "Fitness and health tracking smart watch.",
-    image: createPlaceholder("Watch"),
+    image: "/images/products/smart_watch.jpg",
     lastUpdated: "2026-09-02",
   },
   {
@@ -260,7 +260,7 @@ export const products = [
     supplierId: "sup-003",
     supplier: "Global Garments",
     description: "Non-slip exercise yoga mat with carrying strap.",
-    image: createPlaceholder("Mat"),
+    image: "/images/products/yoga_mat.jpg",
     lastUpdated: "2026-08-28",
   },
 ];

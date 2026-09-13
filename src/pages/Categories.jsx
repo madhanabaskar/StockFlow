@@ -6,9 +6,11 @@ import { Badge } from "../components/ui/Badge";
 import { categoriesBase } from "../data/mockData";
 import { useProducts } from "../context/ProductContext";
 import { useDocumentTitle } from "../utils/useDocumentTitle";
+import { useToast } from "../context/ToastContext";
 
 export function Categories() {
   useDocumentTitle("Categories");
+  const { addToast } = useToast();
   const { products } = useProducts();
   
   // Dynamically map categories with fresh product data
@@ -29,6 +31,7 @@ export function Categories() {
         title="Categories" 
         description="Organize your inventory with categories."
         actionLabel={<><Plus size={16} className="mr-2" /> Add Category</>}
+        onAction={() => addToast("Add Category feature coming soon!")}
       />
 
       {categories.length > 0 ? (

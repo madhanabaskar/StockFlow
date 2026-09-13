@@ -10,10 +10,12 @@ import { useInventory } from "../context/InventoryContext";
 import { formatCurrency } from "../utils/inventory";
 import { Badge } from "../components/ui/Badge";
 import { useDocumentTitle } from "../utils/useDocumentTitle";
+import { useToast } from "../context/ToastContext";
 
 export function ProductDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { addToast } = useToast();
   
   const { products } = useProducts();
   useDocumentTitle(`Product ${id}`);
@@ -92,7 +94,7 @@ export function ProductDetails() {
             </div>
           </div>
         </div>
-        <Button variant="outline">
+        <Button variant="outline" onClick={() => addToast("Edit Product feature coming soon!")}>
           <Edit size={16} className="mr-2" /> Edit Product
         </Button>
       </div>

@@ -7,7 +7,16 @@ export function ProductProvider({ children }) {
   const [products, setProducts] = useState(() => {
     try {
       const stored = localStorage.getItem("stockflow_products");
-      return stored ? JSON.parse(stored) : mockProducts;
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        // Ensure we always use the latest image paths from mockData,
+        // even if the user has older data cached in their browser's local storage.
+        return parsed.map(p => {
+          const mockP = mockProducts.find(m => m.id === p.id);
+          return mockP ? { ...p, image: mockP.image } : p;
+        });
+      }
+      return mockProducts;
     } catch (error) {
       console.error("Failed to parse products from localStorage:", error);
       return mockProducts;

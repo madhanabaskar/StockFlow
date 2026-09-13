@@ -6,9 +6,11 @@ import { Badge } from "../components/ui/Badge";
 import { suppliersBase } from "../data/mockData";
 import { useProducts } from "../context/ProductContext";
 import { useDocumentTitle } from "../utils/useDocumentTitle";
+import { useToast } from "../context/ToastContext";
 
 export function Suppliers() {
   useDocumentTitle("Suppliers");
+  const { addToast } = useToast();
   const { products } = useProducts();
 
   const suppliers = suppliersBase.map(sup => {
@@ -26,6 +28,7 @@ export function Suppliers() {
         title="Suppliers" 
         description="Manage your supplier relationships and contacts."
         actionLabel={<><Plus size={16} className="mr-2" /> Add Supplier</>}
+        onAction={() => addToast("Add Supplier feature coming soon!")}
       />
 
       <Card className="overflow-hidden border-border shadow-sm">

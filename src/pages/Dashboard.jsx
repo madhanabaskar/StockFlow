@@ -14,11 +14,13 @@ import { useInventory } from "../context/InventoryContext";
 import { formatCurrency } from "../utils/inventory";
 import { categoriesBase } from "../data/mockData";
 import { useDocumentTitle } from "../utils/useDocumentTitle";
+import { useToast } from "../context/ToastContext";
 
 const COLORS = ['#166534', '#22c55e', '#86efac', '#3b82f6', '#f59e0b'];
 
 export function Dashboard() {
   const navigate = useNavigate();
+  const { addToast } = useToast();
   const { products } = useProducts();
   const { movements } = useInventory();
 
@@ -84,6 +86,7 @@ export function Dashboard() {
         title="Dashboard" 
         description="Here's what's happening with your inventory today."
         actionLabel={<><Plus size={16} className="mr-2" /> Add Product</>}
+        onAction={() => addToast("Add Product feature coming soon!")}
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

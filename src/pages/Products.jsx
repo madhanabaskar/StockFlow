@@ -9,9 +9,11 @@ import { useProducts } from "../context/ProductContext";
 import { categories, suppliers } from "../data/mockData";
 import { getStockStatus } from "../utils/inventory";
 import { useDocumentTitle } from "../utils/useDocumentTitle";
+import { useToast } from "../context/ToastContext";
 
 export function Products() {
   useDocumentTitle("Products");
+  const { addToast } = useToast();
   const { products } = useProducts();
   
   const [searchTerm, setSearchTerm] = useState("");
@@ -101,6 +103,7 @@ export function Products() {
         title="Products" 
         description="Manage your products and inventory levels."
         actionLabel={<><Plus size={16} className="mr-2" /> Add Product</>}
+        onAction={() => addToast("Add Product feature coming soon!")}
       />
 
       <Card className="overflow-hidden border-border shadow-sm flex flex-col">
